@@ -17,10 +17,10 @@
 </head>
 <body>
 
-    <!-- Контейнер для карты (должен быть первым, чтобы лежать на фоне) -->
+    <!-- 1. Контейнер для карты (всегда должен быть первым) -->
     <div id="map"></div>
 
-    <!-- Левая плашка (название) -->
+    <!-- 2. Левая плашка (название и источник) -->
     <div id="map-title">
         <h1>Численность лисиц в ПФО</h1>
         <p>Данные за 2022 год, тыс. особей</p>
@@ -29,27 +29,43 @@
         </p>
     </div>
 
-    <!-- Правая плашка (диаграмма + картинка + текст) -->
+    <!-- 3. Легенда (шкала интенсивности, в левом нижнем углу) -->
+    <div id="map-legend">
+        <h4>Численность, тыс. особей</h4>
+        <div class="legend-item"><span style="background: #800026;"></span> &gt; 7</div>
+        <div class="legend-item"><span style="background: #f03b20;"></span> 5 - 7</div>
+        <div class="legend-item"><span style="background: #feb24c;"></span> 3 - 5</div>
+        <div class="legend-item"><span style="background: #ffeda0;"></span> 1 - 3</div>
+    </div>
+
+    <!-- 4. Правая плашка (диаграмма + картинка + текст) -->
     <div id="map-info">
+        <!-- Заголовок диаграммы -->
+        <h3 style="margin: 0 0 10px 0; font-size: 14px; text-align: center; color: #333;">
+            Доля регионов в общей численности, %
+        </h3>
+        
+        <!-- Сама диаграмма -->
+        <div id="chart-container" style="height: 200px; margin-bottom: 15px;">
+            <canvas id="foxChart"></canvas>
+        </div>
+
+        <!-- Картинка -->
         <img src="fox.jpg" alt="Лиса" style="width: 100%; border-radius: 6px; margin-bottom: 10px;">
         
+        <!-- Текст -->
         <p style="font-size: 13px; line-height: 1.4; margin: 0 0 10px 0;">
             <b>Зачем считают численность лисиц?</b><br>
             Лисица — хищник, регулирующий численность грызунов. Однако чрезмерный рост её популяции наносит ущерб охотничьему хозяйству и повышает интенсивность распространения бешенства. Учёт численности обеспечивает поддержание баланса в экосистеме.
         </p>
         
+        <!-- Авторство фото -->
         <p style="font-size: 10px; color: #888; margin: 0;">
             Фото: Airwolfhound, CC BY-SA 2.0
         </p>
-        <h3 style="margin: 0 0 10px 0; font-size: 14px; text-align: center; color: #333;">
-            Доля регионов в общей численности, %
-        </h3>
-        <div id="chart-container" style="height: 200px; margin-bottom: 15px;">
-            <canvas id="foxChart"></canvas>
-        </div>
     </div>
 
-    <!-- Логика карты -->
+    <!-- 5. Логика карты -->
     <script src="main.js"></script>
 </body>
 </html>
