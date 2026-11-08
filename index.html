@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Численность лисиц в Приволжском ФО, тыс. (2022 г.)</title>
+    
+    <!-- Стили -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Библиотека MapLibre (версия 5) -->
+    <script src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css" rel="stylesheet" />
+    
+    <!-- Библиотека для диаграмм Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Контейнер для карты (должен быть первым, чтобы лежать на фоне) -->
+    <div id="map"></div>
+
+    <!-- Левая плашка (название) -->
+    <div id="map-title">
+        <h1>Численность лисиц в ПФО</h1>
+        <p>Данные за 2022 год, тыс. особей</p>
+        <p style="font-size: 12px; color: #777; margin-top: 8px; margin-bottom: 0;">
+            Источник: ВНИИОЗ им. проф. Б.М. Житкова, г. Киров
+        </p>
+    </div>
+
+    <!-- Правая плашка (диаграмма + картинка + текст) -->
+    <div id="map-info">
+        <img src="fox.jpg" alt="Лиса" style="width: 100%; border-radius: 6px; margin-bottom: 10px;">
+        
+        <p style="font-size: 13px; line-height: 1.4; margin: 0 0 10px 0;">
+            <b>Зачем считают численность лисиц?</b><br>
+            Лисица — важный хищник, регулирующий численность грызунов. Однако её чрезмерный рост может наносить ущерб охотничьему хозяйству и росту интенсивности переноса бешенства. Учёт численности помогает поддерживать баланс в экосистеме.
+        </p>
+        
+        <p style="font-size: 10px; color: #888; margin: 0;">
+            Фото: Airwolfhound, CC BY-SA 2.0
+        </p>
+        <h3 style="margin: 0 0 10px 0; font-size: 14px; text-align: center; color: #333;">
+            Доля регионов в общей численности, %
+        </h3>
+        <div id="chart-container" style="height: 200px; margin-bottom: 15px;">
+            <canvas id="foxChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Логика карты -->
+    <script src="main.js"></script>
+</body>
+</html>

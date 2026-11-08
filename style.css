@@ -1,0 +1,42 @@
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#map-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;               /* чтобы был поверх карты */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+#map-title h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #222;
+}
+
+#map-title p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #555;
+}
+#map-info {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
