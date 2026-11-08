@@ -40,3 +40,39 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
 }
+#map-legend {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+#map-legend h4 {
+    margin: 0 0 10px 0;
+    font-size: 13px;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.legend-item span {
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    margin-right: 8px;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
